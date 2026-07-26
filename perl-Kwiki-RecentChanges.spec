@@ -1,15 +1,13 @@
 %define upstream_name	 Kwiki-RecentChanges
-%define upstream_version 0.14
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.14
+Release:	6
 
 Summary:	Kwiki Recent Changes Plugin
 License:	GPL
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Kwiki-RecentChanges
-Source0:	https://cpan.metacpan.org/authors/id/G/GU/GUGOD/Kwiki-RecentChanges-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/G/GU/GUGOD/Kwiki-RecentChanges-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -20,7 +18,7 @@ BuildArch:	noarch
 List pages that were recently changed (how long ago can be configured).
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -40,9 +38,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %changelog
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.140.0-1mdv2010.0
 + Revision: 403382
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.14-6mdv2009.0
+- rebuild using %0.14 Thu Jul 31 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.14-6mdv2009.0
 + Revision: 257468
 - rebuild
 
